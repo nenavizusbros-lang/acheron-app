@@ -8,27 +8,63 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="flash" class="flash"></div>
+
     <header class="top-bar">
         <div class="logo">ACHERON</div>
         <div class="balance">
-            <span class="coin">🪙</span>
+            <img src="IMG_20261026_230958.png" alt="coin" class="coin-icon">
             <span id="balance-value">0</span>
         </div>
     </header>
 
-    <main class="main-content">
+    <main id="screen-river" class="main-content screen active-screen">
+        <img src="lucid-origin_Mysterious_ancient_chest_gothic_glowing_red_runes_dark_metal_cyberpunk_minimal_U-0.jpg" alt="chest" class="chest-btn">
+
         <div id="vortex" class="vortex">
+            <img src="IMG_20261026_230750.png" alt="vortex" class="vortex-bg">
             <div class="vortex-inner">
-                <span class="vortex-symbol">🔱</span>
+                <img src="lucid-origin_Pixelated_glowing_skull_occult_symbol_blood_red_and_amber_glowing_edges_pure_bla-0.jpg" alt="skull" class="vortex-skull">
+            </div>
+        </div>
+        
+        <div class="energy-container">
+            <div class="energy-text">Кислород: <span id="energy-value">1000</span>/1000</div>
+            <div class="energy-bar-bg">
+                <div id="energy-fill" class="energy-fill"></div>
             </div>
         </div>
     </main>
 
+    <main id="screen-charon" class="main-content screen">
+        <img src="lucid-origin_Greek_ferryman_silhouette_on_a_boat_hooded_glowing_amber_eyes_minimal_icon_red_o-0.jpg" style="width: 100px; border-radius: 50%; margin-bottom: 20px; mix-blend-mode: screen;">
+        <h2 style="color: #FF003C; text-shadow: 0 0 10px #FF003C;">УЛУЧШЕНИЯ</h2>
+        <p>Раздел в разработке...</p>
+    </main>
+
+    <main id="screen-court" class="main-content screen">
+        <h2 style="color: #FF003C; text-shadow: 0 0 10px #FF003C;">СУД АИДА</h2>
+        <p>Квесты скоро появятся...</p>
+    </main>
+
+    <main id="screen-circles" class="main-content screen">
+        <h2 style="color: #FF003C; text-shadow: 0 0 10px #FF003C;">КРУГИ АДА</h2>
+        <p>Лиги и ранги в разработке...</p>
+    </main>
+
     <footer class="bottom-nav">
-        <button class="nav-btn active">Река</button>
-        <button class="nav-btn">Харон</button>
-        <button class="nav-btn">Суд Аида</button>
-        <button class="nav-btn">Круги Ада</button>
+        <button class="nav-btn active" data-target="screen-river">
+            <img src="IMG_20261026_231400.png" alt="river"><br>Река
+        </button>
+        <button class="nav-btn" data-target="screen-charon">
+            <img src="lucid-origin_Greek_ferryman_silhouette_on_a_boat_hooded_glowing_amber_eyes_minimal_icon_red_o-0.jpg" alt="charon"><br>Харон
+        </button>
+        <button class="nav-btn" data-target="screen-court">
+            <img src="lucid-origin_Scales_of_justice_made_of_dark_bone_glowing_red_occult_minimal_UI_icon_pure_blac-0.jpg" alt="scales"><br>Суд Аида
+        </button>
+        <button class="nav-btn" data-target="screen-circles">
+            <img src="gpt-image-2_Nine_concentric_circles_of_hell_dante_inspired_minimal_glowing_red_lines_on_pure-0.jpg" alt="circles"><br>Круги Ада
+        </button>
     </footer>
 
     <script src="app.js"></script>
